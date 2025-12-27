@@ -2,64 +2,101 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>SS Sales & Services</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SS Sales & Services | Generator Solutions</title>
 
 <style>
-body{
-    margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background:#f4f6f8;
-    color:#333;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #333;
 }
-header{
-    background:#0a3d62;
-    color:white;
-    padding:30px 15px;
-    text-align:center;
+
+/* HEADER */
+header {
+    background: linear-gradient(90deg, #003366, #0055aa);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
 }
-section{
-    max-width:900px;
-    margin:30px auto;
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
+
+header h1 {
+    margin: 0;
+    font-size: 40px;
 }
-h2{
-    color:#0a3d62;
-    margin-bottom:10px;
+
+header p {
+    font-size: 18px;
+    margin-top: 10px;
 }
-ul{
-    list-style:none;
-    padding:0;
+
+/* SECTIONS */
+section {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
-ul li{
-    padding:8px 0;
-    font-size:16px;
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
-.btn{
-    display:inline-block;
-    margin:10px 5px;
-    padding:15px 25px;
-    background:#27ae60;
-    color:white;
-    text-decoration:none;
-    border-radius:6px;
-    font-size:18px;
+
+.card h2 {
+    color: #003366;
 }
-.btn.call{
-    background:#2980b9;
+
+/* SERVICES */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
-.btn.email{
-    background:#8e44ad;
+
+.service-box {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
 }
-footer{
-    text-align:center;
-    padding:15px;
-    background:#0a3d62;
-    color:white;
-    margin-top:40px;
+
+.service-box h3 {
+    color: #0055aa;
+}
+
+/* BUTTONS */
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.btn {
+    padding: 14px 20px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+.call { background: #007bff; }
+.whatsapp { background: #25d366; }
+.email { background: #8e44ad; }
+
+/* FOOTER */
+footer {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
 }
 </style>
 </head>
@@ -67,54 +104,64 @@ footer{
 <body>
 
 <header>
-<h1>SS Sales & Services</h1>
-<p>Generator Buying, Selling & Services</p>
+    <h1>SS Sales & Services</h1>
+    <p>Generator Buying, Selling, Repair & Maintenance Services</p>
 </header>
 
 <section>
-<h2>About Us</h2>
-<p>
-SS Sales & Services provides professional generator buying, selling,
-repair and maintenance services across
-<strong>Himachal Pradesh, Punjab and Jammu</strong>.
-</p>
-</section>
+    <div class="card">
+        <h2>About Us</h2>
+        <p>
+            SS Sales & Services provides professional generator buying, selling, repair, 
+            installation and maintenance services across 
+            <strong>Himachal Pradesh, Punjab and Jammu</strong>.  
+            We focus on reliability, quick support and affordable solutions.
+        </p>
+    </div>
 
-<section>
-<h2>Our Services</h2>
-<ul>
-<li>✔ Generator Buying & Selling</li>
-<li>✔ Generator Repair & Maintenance</li>
-<li>✔ Installation & AMC</li>
-</ul>
-</section>
+    <div class="card">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service-box">
+                <h3>Generator Buying & Selling</h3>
+                <p>New & used generators with quality assurance.</p>
+            </div>
+            <div class="service-box">
+                <h3>Repair & Maintenance</h3>
+                <p>Expert technicians for all generator brands.</p>
+            </div>
+            <div class="service-box">
+                <h3>Installation & AMC</h3>
+                <p>Professional installation and annual maintenance contracts.</p>
+            </div>
+        </div>
+    </div>
 
-<section>
-<h2>Contact Us</h2>
+    <div class="card">
+        <h2>Why Choose Us?</h2>
+        <ul>
+            <li>✔ Experienced technicians</li>
+            <li>✔ Fast service response</li>
+            <li>✔ Affordable pricing</li>
+            <li>✔ Trusted in multiple states</li>
+        </ul>
+    </div>
 
-<p><strong>Service Areas:</strong> Himachal Pradesh, Punjab, Jammu</p>
+    <div class="card">
+        <h2>Contact Us</h2>
+        <p><strong>Service Areas:</strong> Himachal Pradesh, Punjab, Jammu</p>
 
-<!-- 🔴 CHANGE DETAILS BELOW -->
-
-<!-- PHONE -->
-<a class="btn call" href="tel:+919816170505">📞 Call Now</a>
-
-<!-- WHATSAPP -->
-<a class="btn" href="https://wa.me/919816170505" target="_blank">
-💬 WhatsApp Chat
-</a>
-
-<!-- EMAIL -->
-<a class="btn email" href="mailto:sssalesservices@gmail.com">
-📧 Email Us
-</a>
-
+        <div class="buttons">
+            <a class="btn call" href="tel:+919816170505">📞 Call Now</a>
+            <a class="btn whatsapp" href="https://wa.me/919816170505" target="_blank">💬 WhatsApp Chat</a>
+            <a class="btn email" href="mailto:sssalesservices@gmail.com">✉️ Email Us</a>
+        </div>
+    </div>
 </section>
 
 <footer>
-© 2025 SS Sales & Services | All Rights Reserved
+    <p>© 2025 SS Sales & Services | All Rights Reserved</p>
 </footer>
 
 </body>
 </html>
-
