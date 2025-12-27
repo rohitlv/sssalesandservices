@@ -3,178 +3,223 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SS Sales & Services | Generator Solutions</title>
+
+<title>SS Sales & Services | Generator Sales & Service in Amb Himachal</title>
+
+<!-- SEO -->
+<meta name="description" content="SS Sales & Services – Generator buying, selling, repair, maintenance & AMC services in Amb, Himachal Pradesh, Punjab & Jammu.">
+<meta name="keywords" content="generator service Amb, generator repair Himachal, generator AMC Punjab">
+<meta name="author" content="SS Sales & Services">
 
 <style>
 body{
   margin:0;
-  font-family: Arial, sans-serif;
+  font-family:Arial, sans-serif;
   background:#f4f6f8;
   color:#333;
 }
+a{text-decoration:none}
 
-/* HEADER */
-header{
-  background: linear-gradient(90deg,#003366,#0055aa);
+/* Buttons */
+.btn{
+  padding:12px 20px;
+  border-radius:6px;
+  color:#fff;
+  display:inline-block;
+  margin:5px;
+}
+.blue{background:#0b5ed7}
+.green{background:#25D366}
+.purple{background:#6f42c1}
+
+/* Hero */
+.hero{
+  background:linear-gradient(120deg,#0b5ed7,#084298);
   color:white;
   text-align:center;
-  padding:40px 20px;
+  padding:80px 20px;
 }
-header h1{margin:0;font-size:38px;}
-header p{margin-top:10px;font-size:18px;}
+.hero h1{font-size:42px;margin-bottom:10px}
+.hero p{font-size:18px}
 
-/* COMMON CARD */
+/* Sections */
+.section{
+  max-width:1100px;
+  margin:40px auto;
+  padding:20px;
+}
 .card{
   background:white;
-  margin:30px auto;
-  padding:30px;
-  max-width:1100px;
-  border-radius:14px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
-}
-.card h2{
-  color:#003366;
-  margin-bottom:15px;
+  border-radius:10px;
+  padding:25px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.08);
+  margin-bottom:25px;
 }
 
-/* SERVICES */
-.services{
+/* Services */
+.grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:20px;
 }
 .service-box{
-  border:1px solid #ddd;
-  padding:25px;
-  border-radius:12px;
   text-align:center;
+  padding:20px;
+  border:1px solid #ddd;
+  border-radius:10px;
   transition:0.3s;
 }
 .service-box:hover{
-  transform:translateY(-6px);
-  box-shadow:0 8px 20px rgba(0,0,0,0.12);
-}
-.service-box h3{
-  margin-bottom:10px;
-  color:#0055aa;
+  transform:translateY(-5px);
+  box-shadow:0 10px 20px rgba(0,0,0,0.1);
 }
 
-/* GALLERY */
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:15px;
-}
+/* Gallery */
 .gallery img{
   width:100%;
-  height:180px;
-  object-fit:cover;
   border-radius:10px;
-  background:#e0e0e0;
+  transition:0.3s;
+}
+.gallery img:hover{
+  transform:scale(1.05);
 }
 
-/* CONTACT BUTTONS */
-.buttons{
-  display:flex;
-  flex-wrap:wrap;
-  gap:15px;
+/* Form */
+input,textarea{
+  width:100%;
+  padding:10px;
+  margin:8px 0;
+  border-radius:6px;
+  border:1px solid #ccc;
 }
-.btn{
-  padding:14px 22px;
-  border-radius:8px;
-  color:white;
-  text-decoration:none;
-  font-weight:bold;
-}
-.call{background:#1e88e5;}
-.whatsapp{background:#25d366;}
-.email{background:#8e44ad;}
 
-/* FOOTER */
-footer{
-  background:#003366;
-  color:white;
-  text-align:center;
+/* FAQ */
+details{
+  margin:10px 0;
+  background:#f8f9fa;
   padding:15px;
+  border-radius:6px;
+}
+
+/* WhatsApp Floating */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px;
+  border-radius:50%;
+  font-size:22px;
 }
 </style>
 </head>
 
 <body>
 
-<header>
+<!-- HERO -->
+<section class="hero">
   <h1>SS Sales & Services</h1>
-  <p>Generator Buying, Selling & Services</p>
-</header>
+  <p>Generator Buying • Selling • Repair • Maintenance • AMC</p>
+  <a href="#enquiry" class="btn green">Get Free Enquiry</a>
+  <a href="https://wa.me/919816170505" class="btn blue">WhatsApp Us</a>
+</section>
 
-<!-- ABOUT -->
-<section class="card">
-  <h2>About Us</h2>
-  <p>
-    SS Sales & Services provides professional generator buying, selling, 
-    repair and maintenance services across 
-    <b>Himachal Pradesh, Punjab and Jammu</b>.
-  </p>
+<!-- TRUST -->
+<section class="section card">
+  <h2>🤝 Trusted Generator Experts</h2>
+  <p>Serving Himachal Pradesh, Punjab & Jammu with reliable generator solutions from our Amb (Himachal) office.</p>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="section card">
+  <h2>⭐ Why Choose Us</h2>
+  <ul>
+    <li>✔ Experienced technicians</li>
+    <li>✔ Fast service support</li>
+    <li>✔ Genuine spare parts</li>
+    <li>✔ Affordable AMC plans</li>
+  </ul>
 </section>
 
 <!-- SERVICES -->
-<section class="card">
-  <h2>Our Services</h2>
-  <div class="services">
+<section class="section card">
+  <h2>🔧 Our Services</h2>
+  <div class="grid">
     <div class="service-box">
-      <h3>⚡ Buying & Selling</h3>
-      <p>Top generator brands at best prices.</p>
+      <h3>Buying & Selling</h3>
+      <p>Best generator brands</p>
     </div>
     <div class="service-box">
-      <h3>🛠 Repair & Maintenance</h3>
-      <p>Fast expert service & reliable AMC.</p>
+      <h3>Repair & Maintenance</h3>
+      <p>Quick expert service</p>
     </div>
     <div class="service-box">
-      <h3>🔧 Installation & AMC</h3>
-      <p>Complete power solution support.</p>
+      <h3>Installation & AMC</h3>
+      <p>Complete power solutions</p>
     </div>
   </div>
 </section>
 
 <!-- GALLERY -->
-<section class="card">
-  <h2>Gallery</h2>
-  <div class="gallery">
-    <img src="" alt="Add image later">
-    <img src="" alt="Add image later">
-    <img src="" alt="Add image later">
+<section class="section card">
+  <h2>🖼 Gallery</h2>
+  <div class="grid gallery">
+    <img src="images/gen1.jpg" alt="Generator">
+    <img src="images/gen2.jpg" alt="Generator">
+    <img src="images/gen3.jpg" alt="Generator">
   </div>
-  <p style="color:#777;margin-top:10px;">
-    (Images can be added later)
-  </p>
+  <p><small>(Images can be added later)</small></p>
 </section>
 
-<!-- CONTACT -->
-<section class="card">
-  <h2>Contact Us</h2>
-  <p><b>Service Areas:</b> Himachal Pradesh, Punjab, Jammu</p>
-  <div class="buttons">
-    <a href="tel:+919816170505" class="btn call">📞 Call Now</a>
-    <a href="https://wa.me/919816170505" class="btn whatsapp">💬 WhatsApp Chat</a>
-    <a href="mailto:sssalesservices@gmail.com" class="btn email">✉ Email Us</a>
-  </div>
+<!-- TESTIMONIALS -->
+<section class="section card">
+  <h2>💬 Testimonials</h2>
+  <p>“Very fast service and good support.” – Customer, Amb</p>
+  <p>“Best generator service in our area.” – Client, Punjab</p>
 </section>
 
-<!-- GOOGLE MAP -->
-<section class="card">
-  <h2>Our Location</h2>
+<!-- FAQ -->
+<section class="section card">
+  <h2>❓ FAQ</h2>
+  <details>
+    <summary>Do you provide AMC?</summary>
+    <p>Yes, we provide affordable AMC plans.</p>
+  </details>
+  <details>
+    <summary>Which areas do you serve?</summary>
+    <p>Himachal Pradesh, Punjab & Jammu.</p>
+  </details>
+</section>
+
+<!-- LOCATION -->
+<section class="section card">
+  <h2>📍 Our Office – Amb (Himachal Pradesh)</h2>
   <iframe 
-    src="https://www.google.com/maps?q=Punjab&output=embed"
-    width="100%" 
-    height="350" 
-    style="border:0;border-radius:12px;"
-    loading="lazy">
+    src="https://www.google.com/maps?q=Amb+Himachal+Pradesh&output=embed"
+    width="100%" height="300" style="border:0;" loading="lazy">
   </iframe>
 </section>
 
-<footer>
-  © 2025 SS Sales & Services
+<!-- ENQUIRY FORM -->
+<section id="enquiry" class="section card">
+  <h2>📩 Customer Enquiry</h2>
+  <form action="mailto:sssalesservices@gmail.com" method="post" enctype="text/plain">
+    <input type="text" name="Name" placeholder="Your Name" required>
+    <input type="tel" name="Phone" placeholder="Phone Number" required>
+    <input type="email" name="Email" placeholder="Email">
+    <textarea name="Message" placeholder="Your Requirement"></textarea>
+    <button class="btn blue" type="submit">Send Enquiry</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer class="section card" style="text-align:center">
+  © 2025 SS Sales & Services | Amb, Himachal Pradesh
 </footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/919816170505" class="whatsapp">💬</a>
 
 </body>
 </html>
