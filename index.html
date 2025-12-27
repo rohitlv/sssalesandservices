@@ -1,248 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>SS Sales & Services | Generator Solutions</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SS Sales & Services | Generator Solutions</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f6f8;
-      color: #333;
-    }
+<style>
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#f4f6f8;
+  color:#333;
+}
 
-    header {
-      background: linear-gradient(90deg, #003366, #0055aa);
-      color: white;
-      padding: 50px 20px;
-      text-align: center;
-    }
+/* HEADER */
+header{
+  background: linear-gradient(90deg,#003366,#0055aa);
+  color:white;
+  text-align:center;
+  padding:40px 20px;
+}
+header h1{margin:0;font-size:38px;}
+header p{margin-top:10px;font-size:18px;}
 
-    header h1 {
-      margin: 0;
-      font-size: 40px;
-    }
+/* COMMON CARD */
+.card{
+  background:white;
+  margin:30px auto;
+  padding:30px;
+  max-width:1100px;
+  border-radius:14px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+.card h2{
+  color:#003366;
+  margin-bottom:15px;
+}
 
-    header p {
-      font-size: 18px;
-      margin-top: 10px;
-    }
+/* SERVICES */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+.service-box{
+  border:1px solid #ddd;
+  padding:25px;
+  border-radius:12px;
+  text-align:center;
+  transition:0.3s;
+}
+.service-box:hover{
+  transform:translateY(-6px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.12);
+}
+.service-box h3{
+  margin-bottom:10px;
+  color:#0055aa;
+}
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 20px;
-    }
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
+}
+.gallery img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:10px;
+  background:#e0e0e0;
+}
 
-    .card {
-      background: white;
-      border-radius: 12px;
-      padding: 25px;
-      margin-bottom: 30px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
+/* CONTACT BUTTONS */
+.buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+}
+.btn{
+  padding:14px 22px;
+  border-radius:8px;
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+}
+.call{background:#1e88e5;}
+.whatsapp{background:#25d366;}
+.email{background:#8e44ad;}
 
-    h2 {
-      color: #003366;
-      margin-top: 0;
-    }
-
-    /* SERVICES */
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    ul li {
-      margin: 10px 0;
-      font-size: 16px;
-    }
-
-    ul li::before {
-      content: "✔ ";
-      color: green;
-      font-weight: bold;
-    }
-
-    /* BUTTONS */
-    .buttons a {
-      display: inline-block;
-      padding: 12px 18px;
-      margin: 10px 10px 0 0;
-      border-radius: 8px;
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-    }
-
-    .call { background: #1e88e5; }
-    .whatsapp { background: #25d366; }
-    .email { background: #8e44ad; }
-
-    /* GALLERY */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 12px;
-      cursor: pointer;
-      background: #eee;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.08);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-    }
-
-    /* POPUP */
-    #popup {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.85);
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-    }
-
-    #popup img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 10px;
-    }
-
-    .close {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      font-size: 40px;
-      color: white;
-      cursor: pointer;
-    }
-
-    /* FORM */
-    form input, form textarea {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-
-    form button {
-      padding: 12px 20px;
-      background: #003366;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    footer {
-      background: #003366;
-      color: white;
-      text-align: center;
-      padding: 15px;
-    }
-  </style>
+/* FOOTER */
+footer{
+  background:#003366;
+  color:white;
+  text-align:center;
+  padding:15px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
   <h1>SS Sales & Services</h1>
-  <p>Generator Buying, Selling, Repair & Maintenance</p>
+  <p>Generator Buying, Selling & Services</p>
 </header>
 
-<div class="container">
+<!-- ABOUT -->
+<section class="card">
+  <h2>About Us</h2>
+  <p>
+    SS Sales & Services provides professional generator buying, selling, 
+    repair and maintenance services across 
+    <b>Himachal Pradesh, Punjab and Jammu</b>.
+  </p>
+</section>
 
-  <section class="card">
-    <h2>About Us</h2>
-    <p>
-      SS Sales & Services provides professional generator buying, selling,
-      repair and maintenance services across
-      <strong>Himachal Pradesh, Punjab and Jammu</strong>.
-    </p>
-  </section>
-
-  <section class="card">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Generator Buying & Selling</li>
-      <li>Generator Repair & Maintenance</li>
-      <li>Installation & AMC</li>
-    </ul>
-  </section>
-
-  <section class="card">
-    <h2>Gallery</h2>
-
-    <!-- ADD IMAGES LATER INSIDE images/ FOLDER -->
-    <div class="gallery">
-      <img src="images/gen1.jpg" onclick="openPopup(this)">
-      <img src="images/gen2.jpg" onclick="openPopup(this)">
-      <img src="images/gen3.jpg" onclick="openPopup(this)">
-      <img src="images/service1.jpg" onclick="openPopup(this)">
+<!-- SERVICES -->
+<section class="card">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="service-box">
+      <h3>⚡ Buying & Selling</h3>
+      <p>Top generator brands at best prices.</p>
     </div>
-  </section>
-
-  <section class="card">
-    <h2>Contact Us</h2>
-    <p><strong>Service Areas:</strong> Himachal Pradesh, Punjab, Jammu</p>
-
-    <div class="buttons">
-      <a class="call" href="tel:+919816170505">📞 Call Now</a>
-      <a class="whatsapp" href="https://wa.me/919816170505">💬 WhatsApp Chat</a>
-      <a class="email" href="mailto:sssalesservices@gmail.com">📧 Email Us</a>
+    <div class="service-box">
+      <h3>🛠 Repair & Maintenance</h3>
+      <p>Fast expert service & reliable AMC.</p>
     </div>
-  </section>
+    <div class="service-box">
+      <h3>🔧 Installation & AMC</h3>
+      <p>Complete power solution support.</p>
+    </div>
+  </div>
+</section>
 
-  <section class="card">
-    <h2>Get a Quotation</h2>
+<!-- GALLERY -->
+<section class="card">
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img src="" alt="Add image later">
+    <img src="" alt="Add image later">
+    <img src="" alt="Add image later">
+  </div>
+  <p style="color:#777;margin-top:10px;">
+    (Images can be added later)
+  </p>
+</section>
 
-    <form action="mailto:sssalesandservices@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="Name" placeholder="Your Name" required>
-      <input type="tel" name="Phone" placeholder="Phone Number" required>
-      <input type="email" name="Email" placeholder="Email Address">
-      <textarea name="Message" placeholder="Your Requirement"></textarea>
-      <button type="submit">Send Enquiry</button>
-    </form>
-  </section>
+<!-- CONTACT -->
+<section class="card">
+  <h2>Contact Us</h2>
+  <p><b>Service Areas:</b> Himachal Pradesh, Punjab, Jammu</p>
+  <div class="buttons">
+    <a href="tel:+919816170505" class="btn call">📞 Call Now</a>
+    <a href="https://wa.me/919816170505" class="btn whatsapp">💬 WhatsApp Chat</a>
+    <a href="mailto:sssalesservices@gmail.com" class="btn email">✉ Email Us</a>
+  </div>
+</section>
 
-</div>
+<!-- GOOGLE MAP -->
+<section class="card">
+  <h2>Our Location</h2>
+  <iframe 
+    src="https://www.google.com/maps?q=Punjab&output=embed"
+    width="100%" 
+    height="350" 
+    style="border:0;border-radius:12px;"
+    loading="lazy">
+  </iframe>
+</section>
 
 <footer>
-  © 2025 SS Sales & Services. All rights reserved.
+  © 2025 SS Sales & Services
 </footer>
-
-<!-- POPUP -->
-<div id="popup" onclick="closePopup()">
-  <span class="close">&times;</span>
-  <img id="popup-img">
-</div>
-
-<script>
-function openPopup(img) {
-  document.getElementById("popup").style.display = "flex";
-  document.getElementById("popup-img").src = img.src;
-}
-
-function closePopup() {
-  document.getElementById("popup").style.display = "none";
-}
-</script>
 
 </body>
 </html>
